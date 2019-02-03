@@ -1,0 +1,6 @@
+django-admin startproject djangoblogs
+cd djangoblogs
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py startapp blogs
+python manage.py runserver
