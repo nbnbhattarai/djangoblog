@@ -1,9 +1,8 @@
-<html>
-    <head><title>Django Blog</title></head>
-    <body>
-        <h2>{{ blog.title }}</h2>
-        <p>{{ blog.content }}</p>
+{% extends "base.html" %}
 
-        <a href="{% url 'blog_update' blog_id=blog.id %}">Update</a>
-    </body>
-</html>
+{% block content %}
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.content }}</p>
+
+    <a href="{% url 'blog_update' pk=blog.id %}">Update</a>
+{% endblock content %}
